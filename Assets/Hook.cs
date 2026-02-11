@@ -1,12 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class Hook : MonoBehaviour
 {
-    public Transform object1;
-    public Transform object2;
+    public Transform object1;          // Usually hook
+    public Transform object2;          // Usually rod tip or reference point
+    public LineLength lineLength;      // Reference to LineLength script
 
-    private Rigidbody hookedFishRb;   // store the specific fish
+    private Rigidbody hookedFishRb;   
     private bool fishHooked = false;
+    private bool reelStarted = false;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -16,7 +19,7 @@ public class Hook : MonoBehaviour
             // Store THIS specific fish
             hookedFishRb = collider.attachedRigidbody;
 
-            // Attach it to hook
+            // Attach fish to hook
             var joint = hookedFishRb.gameObject.AddComponent<FixedJoint>();
             joint.connectedBody = GetComponent<Rigidbody>();
 
@@ -28,7 +31,7 @@ public class Hook : MonoBehaviour
 
     void Update()
     {
-        if (!fishHooked || hookedFishRb == null)
+        if (!fishHooked || hookedFishRb == null || reelStarted)
             return;
 
         float y1 = object1.position.y;
@@ -39,7 +42,20 @@ public class Hook : MonoBehaviour
             Debug.Log("HOORAY :D Fish is above!");
 
             // Remove only Y freeze from THIS fish
-           hookedFishRb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+            hookedFishRb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+
+            reelStarted = true;
+            StartCoroutine(ReelAfterDelay());
+        }
+    }
+
+    private IEnumerator ReelAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+
+        if (lineLength != null)
+        {
+            lineLength.StartReelIn(0.1f, 2f); // Reel to 0.1 over 2 seconds
         }
     }
 }
