@@ -300,8 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5876645650c1c47b4dc58555d5a355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  object1: {fileID: 0}
-  object2: {fileID: 0}
+  object1: {fileID: 5650742476085505437}
+  object2: {fileID: 403239824540792954}
+  lineLength: {fileID: 8889483506305129174}
 --- !u!153 &7301459540953308837
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -427,6 +428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 795339989109388421}
+  - component: {fileID: 8889483506305129174}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -452,6 +454,20 @@ Transform:
   - {fileID: 9028762479116971536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8889483506305129174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3459289529392207754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add75cf7020ecaf41850dfa19e91f7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  hookJoint: {fileID: 7301459540953308837}
+  length: 1
 --- !u!1 &4071382023726978977
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: fa24532a-e52c-4a62-aef0-037d8f9b1904
+  instanceId: 40ad1c90-9bc9-4fd1-9395-f78711b7905e
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
