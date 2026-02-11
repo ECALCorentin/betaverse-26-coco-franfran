@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Poisson_Legendaire
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: 
-  rarity: 2
+  rarity: 3
   rarityColor: {r: 1, g: 1, b: 1, a: 1}

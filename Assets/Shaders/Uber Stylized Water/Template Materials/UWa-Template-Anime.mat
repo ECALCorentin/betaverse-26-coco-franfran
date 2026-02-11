@@ -358,7 +358,7 @@ Material:
     - _SurfFoam_AlphaBlend: 0
     - _SurfFoam_Edge: 0.277
     - _SurfFoam_EdgeSmooth: 0.098
-    - _SurfFoam_Scale: 3
+    - _SurfFoam_Scale: 1
     - _Surface: 1
     - _SurfaceDistortionScale: 1.48
     - _SurfaceDistortionStrength: 0.1
@@ -420,7 +420,7 @@ Material:
     - _1st_Wave_Direction: {r: 1, g: 0, b: 0, a: 0}
     - _2nd_Wave_Direction: {r: -1, g: 0, b: 1, a: 0}
     - _Color_Deep: {r: 0, g: 0.15005267, b: 0.645, a: 1}
-    - _Color_Shallow: {r: 0.12156862, g: 1, b: 0.9824349, a: 1}
+    - _Color_Shallow: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
     - _Deep_Color: {r: 0, g: 0.15303946, b: 1, a: 1}
     - _DistanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _FarColor: {r: 0.15966535, g: 0.6787135, b: 0.8679245, a: 0}

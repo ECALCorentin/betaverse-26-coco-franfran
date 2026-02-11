@@ -1928,6 +1928,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1235043973234127012, guid: 89a2215818f334b9e9a43dcc1d40463a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4003079702dcc7148a05fbec8dddc9f6, type: 2}
     - target: {fileID: 3173791989571175948, guid: 89a2215818f334b9e9a43dcc1d40463a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.37005
@@ -1975,7 +1979,7 @@ PrefabInstance:
     - target: {fileID: 8370721141217772724, guid: 89a2215818f334b9e9a43dcc1d40463a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b69c51b79cb141240b7c8603fb8d4675, type: 2}
+      objectReference: {fileID: 2100000, guid: bb6266f65ae02e7419e9bc6a1671c0c8, type: 2}
     - target: {fileID: 8538525521429456677, guid: 89a2215818f334b9e9a43dcc1d40463a, type: 3}
       propertyPath: m_Name
       value: Boat_complet
@@ -2019,11 +2023,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3807169088716581800, guid: 62b8aa16509d142d98be79a69f5dc8ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.082
+      value: -2.335
       objectReference: {fileID: 0}
     - target: {fileID: 3807169088716581800, guid: 62b8aa16509d142d98be79a69f5dc8ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.129
+      value: -0.976
       objectReference: {fileID: 0}
     - target: {fileID: 3807169088716581800, guid: 62b8aa16509d142d98be79a69f5dc8ab, type: 3}
       propertyPath: m_LocalPosition.z
