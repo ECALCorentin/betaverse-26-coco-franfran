@@ -22,4 +22,6 @@ public class RopeVisual : MonoBehaviour
         line.SetPosition(0, startPoint.position);
         line.SetPosition(1, endPoint.position);
     }
-}
+
+
+    }

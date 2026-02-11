@@ -7,15 +7,15 @@ public class HeightZComparer : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"Z1: {object1.position.z} | Z2: {object2.position.z}");
+        Debug.Log($"Y1: {object1.position.y} | Y2: {object2.position.y}");
 
         if (object1 == null || object2 == null)
             return;
 
-        float z1 = object1.position.z;
-        float z2 = object2.position.z;
+        float y1 = object1.position.y;
+        float y2 = object2.position.y;
 
-        if (z1 > z2)
+        if (y1 > y2)
         {
             Debug.Log("Object 1 is higher than Object 2 on the Z axis");
         }

@@ -253,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 2941951235093901656}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.93990004, y: 0.06810002, z: 0.55896}
+  m_LocalPosition: {x: -0.93990004, y: 0.06810002, z: 0.019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -300,6 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5876645650c1c47b4dc58555d5a355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  object1: {fileID: 0}
+  object2: {fileID: 0}
 --- !u!153 &7301459540953308837
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -409,7 +411,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941951235093901656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1efc4af7080754a47a8190bf0a5b5c24, type: 3}
   m_Name: 
@@ -550,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 680db3da-b53a-4882-a2db-e23ba454b465
+  instanceId: fa24532a-e52c-4a62-aef0-037d8f9b1904
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -850,6 +852,14 @@ LineRenderer:
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -914,7 +924,7 @@ LineRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!114 &841735127766708172
