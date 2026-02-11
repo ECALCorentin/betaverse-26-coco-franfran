@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31134e0f75d0494a86188a0b0d2a90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TableObjectProxy
-  cubePrefab: {fileID: 1296816050988618928, guid: d40fabebb729f436ca073b4b75f6a267, type: 3}
+  cubePrefab: {fileID: 8538525521429456677, guid: 89a2215818f334b9e9a43dcc1d40463a, type: 3}
   cylinderPrefab: {fileID: 5506625245247973035, guid: 62b8aa16509d142d98be79a69f5dc8ab, type: 3}
-  detectionRadius: 0.5
+  detectionRadius: 1

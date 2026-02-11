@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 360197563304713859}
   - component: {fileID: 5420253441603812299}
   - component: {fileID: 5830820318258511838}
+  - component: {fileID: 143844900051025457}
   m_Layer: 0
   m_Name: Fish 1
   m_TagString: Untagged
@@ -185,3 +186,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6212ff1155f548540874c0ee5778332f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &143844900051025457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066213026396727364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add7a5f07afe4436ab56759a39262775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishGrabHandler
+  fishData: {fileID: 0}
