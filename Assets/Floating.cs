@@ -21,7 +21,7 @@ public class Floating : MonoBehaviour
         var rb = GetComponent<Rigidbody>();
         var ray = new Ray(rb.worldCenterOfMass, Vector3.down);
 
-        var yPos = 0f;
+        var yPos = outOfWaterHeight;
         if (Physics.Raycast(ray, out var hitInfo, 10, raycastLayers))
         {
             yPos = hitInfo.distance;

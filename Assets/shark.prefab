@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 974369990135344978, guid: d8c9aab8320001f4f9476e356fb0aebd, type: 3}
       propertyPath: m_Name
-      value: Fish_base
+      value: shark
       objectReference: {fileID: 0}
     - target: {fileID: 1184079972588183382, guid: d8c9aab8320001f4f9476e356fb0aebd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,14 @@ PrefabInstance:
     - target: {fileID: 1184079972588183382, guid: d8c9aab8320001f4f9476e356fb0aebd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464179010578066361, guid: d8c9aab8320001f4f9476e356fb0aebd, type: 3}
+      propertyPath: m_Force.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492204186064640280, guid: d8c9aab8320001f4f9476e356fb0aebd, type: 3}
+      propertyPath: instanceId
+      value: 7294eeb5-61d3-4b56-a670-ac6d8e4f74cb
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

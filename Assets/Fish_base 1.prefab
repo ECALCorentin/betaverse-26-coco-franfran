@@ -177,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 3781291245857211067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -299,8 +299,8 @@ ConfigurableJoint:
     useAcceleration: 0
   m_SlerpDrive:
     serializedVersion: 4
-    positionSpring: 20
-    positionDamper: 1
+    positionSpring: 1
+    positionDamper: 0.5
     maximumForce: 3.4028233e+38
     useAcceleration: 0
   m_ProjectionMode: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
   outOfWaterHeight: 0.5
   raycastLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8192
   outOfWaterDrag: 0
   inWaterDrag: 1
   isInWater: 0
@@ -491,8 +491,6 @@ GameObject:
   - component: {fileID: 3711836752377073232}
   - component: {fileID: 8954319149836004120}
   - component: {fileID: 7464582469765590797}
-  - component: {fileID: 3928177046414110434}
-  - component: {fileID: 8432405248367228502}
   - component: {fileID: 1661683767510596071}
   - component: {fileID: 1599813063596704281}
   - component: {fileID: 4330251024990321268}
@@ -512,7 +510,7 @@ Transform:
   m_GameObject: {fileID: 5380977662950160535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -561,32 +559,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   isAttached: 0
-  randomForce: 0
---- !u!114 &3928177046414110434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5380977662950160535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add7a5f07afe4436ab56759a39262775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FishGrabHandler
-  fishData: {fileID: 0}
---- !u!75 &8432405248367228502
-ConstantForce:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5380977662950160535}
-  m_Enabled: 1
-  m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 0}
+  forwardForce: 10
+  randomTorqueY: 1
+  torqueChangeInterval: 3
 --- !u!114 &1661683767510596071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +602,7 @@ MonoBehaviour:
   outOfWaterHeight: 0.5
   raycastLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8192
   outOfWaterDrag: 0
   inWaterDrag: 1
   isInWater: 0
@@ -694,7 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 1ebe40bd-4702-407f-9546-50ecef7edd42
+  instanceId: 631d4203-a99e-4a8f-a2c6-17589ba03fbe
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
