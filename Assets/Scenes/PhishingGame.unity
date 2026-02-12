@@ -119,6 +119,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1179780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.482416
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000000067138757
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2463865
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c72d12831979f44109341f7f15210a14, type: 3}
+      propertyPath: m_Name
+      value: BOAT 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c72d12831979f44109341f7f15210a14, type: 3}
 --- !u!1 &50871645
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +188,7 @@ GameObject:
   - component: {fileID: 50871647}
   - component: {fileID: 50871646}
   m_Layer: 0
-  m_Name: '[BuildingBlock] Haptics'
+  m_Name: '[BuildingBlock] Haptics (Fish Bite)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dc93c7e1ae142448d4a122be86ea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Haptics::Oculus.Haptics.HapticSource
-  _clip: {fileID: 0}
+  _clip: {fileID: 2460798210113038985, guid: 901c18a8e913948bb879b3a520d09ce4, type: 3}
   _controller: 2
   _loop: 0
   _amplitude: 1
@@ -711,6 +768,63 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: mode
       _value: '{"value__":0}'
+--- !u!1001 &390410658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.1006875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000018680964
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.209102
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
+      propertyPath: m_Name
+      value: Boat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee99417700ded46b7b760318cf0ce8db, type: 3}
 --- !u!1 &409193862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,3 +2641,5 @@ SceneRoots:
   - {fileID: 1881171806}
   - {fileID: 634560280}
   - {fileID: 50871648}
+  - {fileID: 390410658}
+  - {fileID: 1179780}
