@@ -1,9 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Oculus.Interaction;
+// using Oculus.Haptics;
+
 
 public class Hook : MonoBehaviour
 {
+
+    //[SerializeField] private Oculus.Haptics.HapticClipPlayer _hapticPlayer;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _sound;
+
+
+
     public Transform object1;
     public Transform object2;
     public LineLength lineLength;
@@ -41,6 +50,16 @@ public class Hook : MonoBehaviour
 
 
             collider.attachedRigidbody.GetComponent<Fish>().isAttached = true;
+
+            // if(_hapticPlayer != null)
+            //{
+                //_hapticPlayer.Play();
+            //}
+
+            if(_audioSource != null && _sound != null)
+            {
+                _audioSource.PlayOneShot(_sound);
+            }
 
               grabInteractable = hookedFishRb.GetComponentInChildren<GrabInteractable>();
             if (grabInteractable != null)
@@ -95,7 +114,7 @@ public class Hook : MonoBehaviour
                 }
             case State.Caught:
                 {
-                    if (fishJoint && !fishJoint.GetComponent<Fish>().isInWater)
+                    if (fishJoint && !fishJoint.GetComponent<Floating>().isInWater)
                     {
                         newState = State.Releasing;
                     }

@@ -1528,67 +1528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ac22b6042894067bd833d557a48aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: meta.xr.mrutilitykit::Meta.XR.MRUtilityKit.MRUKRoom
---- !u!1001 &811553317
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4478436920326554022, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: instanceId
-      value: 0fc47aa5-1e1e-47ff-ad48-06994079b945
-      objectReference: {fileID: 0}
-    - target: {fileID: 5078209110838196204, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_Name
-      value: Fish2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.43896836
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.000000002032266
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.25381237
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598466585327634408, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a11592cfc05beb447b6cce74292819dd, type: 3}
 --- !u!1001 &822217048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2326,7 +2265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1204421171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2339,7 +2278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a155ece80369d4e99bdaf5e59169b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _occlusionShadersMode: 1
+  _occlusionShadersMode: 2
   _removeHands: 0
   CustomTrackingSpace: {fileID: 0}
   <MaskMeshFilters>k__BackingField: []
@@ -2452,7 +2391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1331595576
 Transform:
   m_ObjectHideFlags: 0
@@ -2824,8 +2763,8 @@ MonoBehaviour:
     Prefabs:
     - {fileID: 3721633780022155011, guid: e5a265ff79f8a5c49b36f5d06373406b, type: 3}
     PrefabSelection: 0
-    MatchAspectRatio: 1
-    CalculateFacingDirection: 0
+    MatchAspectRatio: 0
+    CalculateFacingDirection: 1
     Scaling: 3
     Alignment: 4
     IgnorePrefabSize: 0
@@ -3321,4 +3260,3 @@ SceneRoots:
   - {fileID: 1092080486}
   - {fileID: 1204421173}
   - {fileID: 1331595576}
-  - {fileID: 811553317}
