@@ -7,6 +7,7 @@ using Oculus.Haptics;
 public class Hook : MonoBehaviour
 {
     [SerializeField] private Oculus.Haptics.HapticClipPlayer _hapticPlayer;
+    [SerializeField] private AudioSource _audioSource;
     public Transform object1;
     public Transform object2;
     public LineLength lineLength;
@@ -48,6 +49,11 @@ public class Hook : MonoBehaviour
             if (_hapticPlayer != null)
             {
                 _hapticPlayer.Play();
+            }
+
+            if (_audioSource != null && _biteSound != null)
+        {
+                _audioSource.PlayOneShot(_biteSound);
             }
 
               grabInteractable = hookedFishRb.GetComponentInChildren<GrabInteractable>();
