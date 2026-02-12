@@ -266,7 +266,7 @@ Material:
     - _FresnelStrength: 1
     - _Fresnel_Opacity: 1
     - _Fresnel_Power: 10
-    - _InterSec_Dissolve: 1.88
+    - _InterSec_Dissolve: 0.19
     - _InterSec_Edge_Dissolve: 1
     - _InterSec_Edge_Fade: 0
     - _InterSec_Foam_Distortion: 0.1
@@ -362,7 +362,7 @@ Material:
     - _Surface: 1
     - _SurfaceDistortionScale: 1.48
     - _SurfaceDistortionStrength: 0.1
-    - _SurfaceDistortion_Scale: 1
+    - _SurfaceDistortion_Scale: 1.01
     - _SurfaceDistortion_Strength: 0.2
     - _SurfaceFoamDistortion: 0.1
     - _SurfaceFoamScale: 2.5
@@ -449,7 +449,7 @@ Material:
     - _ShoreLineMaskTile: {r: 3, g: 3, b: 0, a: 0}
     - _Specular_Color: {r: 68.5935, g: 68.5935, b: 68.5935, a: 1}
     - _SurfFoam_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _SurfFoam_Pan: {r: 0.2, g: 0.1, b: 0, a: 0}
+    - _SurfFoam_Pan: {r: 0.46, g: 0.1, b: 0, a: 0}
     - _SurfFoam_Tile: {r: 1, g: 1, b: 0, a: 0}
     - _Surface: {r: 1, g: 1, b: 1, a: 1}
     - _SurfaceDistortionSpeed: {r: 0.1, g: 0.02, b: 0, a: 0}
