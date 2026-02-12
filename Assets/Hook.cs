@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Oculus.Interaction;
+using Oculus.Haptics;
+
 
 public class Hook : MonoBehaviour
 {
+    [SerializeField] private Oculus.Haptics.HapticClipPlayer _hapticPlayer;
     public Transform object1;
     public Transform object2;
     public LineLength lineLength;
@@ -41,6 +44,11 @@ public class Hook : MonoBehaviour
 
 
             collider.attachedRigidbody.GetComponent<Fish>().isAttached = true;
+
+            if (_hapticPlayer != null)
+            {
+                _hapticPlayer.Play();
+            }
 
               grabInteractable = hookedFishRb.GetComponentInChildren<GrabInteractable>();
             if (grabInteractable != null)
