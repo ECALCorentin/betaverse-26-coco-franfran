@@ -1,61 +1,151 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using Oculus.Interaction;
 
 public class Hook : MonoBehaviour
 {
-    public Transform object1;          // Usually hook
-    public Transform object2;          // Usually rod tip or reference point
-    public LineLength lineLength;      // Reference to LineLength script
+    public Transform object1;
+    public Transform object2;
+    public LineLength lineLength;
 
-    private Rigidbody hookedFishRb;   
-    private bool fishHooked = false;
-    private bool reelStarted = false;
+    private FixedJoint fishJoint;
+    private GrabInteractable grabInteractable;
+
+    public enum State
+    {
+        Waiting,
+        Caught,
+        Reel,
+        Releasing,
+        WaitAfterRelease
+    }
+
+    State state = State.Waiting;
+    float stateTime = 0;
+
 
     void OnTriggerEnter(Collider collider)
     {
+        if(state != State.Waiting)
+            return;
+        if (fishJoint)
+            return;
+
         if (collider.attachedRigidbody &&
             collider.attachedRigidbody.GetComponent<Fish>())
         {
-            // Store THIS specific fish
-            hookedFishRb = collider.attachedRigidbody;
+            var hookedFishRb = collider.attachedRigidbody;
 
-            // Attach fish to hook
-            var joint = hookedFishRb.gameObject.AddComponent<FixedJoint>();
-            joint.connectedBody = GetComponent<Rigidbody>();
+            fishJoint = hookedFishRb.gameObject.AddComponent<FixedJoint>();
+            fishJoint.connectedBody = GetComponent<Rigidbody>();
 
-            collider.enabled = false;
 
-            fishHooked = true;
+            collider.attachedRigidbody.GetComponent<Fish>().isAttached = true;
+
+              grabInteractable = hookedFishRb.GetComponentInChildren<GrabInteractable>();
+            if (grabInteractable != null)
+            {
+                grabInteractable.WhenStateChanged += OnGrabStateChanged;
+            }
+        }
+    }
+
+    private void OnGrabStateChanged(InteractableStateChangeArgs args)
+    {
+        // When grab starts
+        if (args.NewState == InteractableState.Select)
+        {
+                UnhookFish();
+        }
+    }
+
+    private void UnhookFish()
+    {
+        Debug.Log("Fish grabbed — freeing from hook!");
+
+        if (fishJoint != null)
+        {
+            Destroy(fishJoint);
+            fishJoint = null;
+      
+
+            if (grabInteractable != null)
+            {
+                grabInteractable.WhenStateChanged -= OnGrabStateChanged;
+            }
+
+            fishJoint = null;
         }
     }
 
     void Update()
     {
-        if (!fishHooked || hookedFishRb == null || reelStarted)
-            return;
 
-        float y1 = object1.position.y;
-        float y2 = object2.position.y;
-
-        if (y1 > y2)
+        State newState = state;
+        stateTime += Time.deltaTime;
+        switch(state)
         {
-            Debug.Log("HOORAY :D Fish is above!");
+            case State.Waiting:
+                {
+                    if(fishJoint)
+                    {
+                        newState = State.Caught;
+                    }
+                    break;
+                }
+            case State.Caught:
+                {
+                    if (fishJoint && !fishJoint.GetComponent<Fish>().isInWater)
+                    {
+                        newState = State.Releasing;
+                    }
 
-            // Remove only Y freeze from THIS fish
-            hookedFishRb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+                    break;
+                }
+            case State.Releasing:
+                {
+                    if (!fishJoint)
+                    {
+                        newState = State.WaitAfterRelease;
+                    }
+                    break;
+                }
+            case State.WaitAfterRelease:
+                {
+                    if(stateTime>1)
+                    {
+                        newState = State.Waiting;
+                    }
+                    break;
+                }
 
-            reelStarted = true;
-            StartCoroutine(ReelAfterDelay());
         }
-    }
 
-    private IEnumerator ReelAfterDelay()
-    {
-        yield return new WaitForSeconds(2f);
+        if(newState != state)
+            {
+            stateTime = 0;
+            switch (newState)
+            {
+                case State.Releasing:
+                    {
+                        if (lineLength != null)
+                        {
+                            lineLength.StartReelIn(0.1f, 2f);
+                        }
+                        break;
+                    }
+                case State.Waiting:
+                {
+                    if (lineLength != null)
+                    {
+                        lineLength.StartReelIn(1, 2f);
+                    }
+                    break;
+                }
 
-        if (lineLength != null)
-        {
-            lineLength.StartReelIn(0.1f, 2f); // Reel to 0.1 over 2 seconds
+            }
+
+            state = newState;
         }
     }
 }
