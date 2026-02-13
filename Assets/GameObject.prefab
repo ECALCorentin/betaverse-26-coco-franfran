@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _audioSource: {fileID: 6616094003815496546}
-  _Fishbite: {fileID: 0}
+  _Fishbite: {fileID: 8300000, guid: b611c5e04ba144b19a010abad98907f0, type: 3}
   _FishGrabSound: {fileID: 8300000, guid: 0aab1b755909848c59269922397186fa, type: 3}
   biteHapticClip: {fileID: 2460798210113038985, guid: 901c18a8e913948bb879b3a520d09ce4, type: 3}
   object1: {fileID: 5650742476085505437}

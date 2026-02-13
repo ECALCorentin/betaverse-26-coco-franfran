@@ -59,7 +59,7 @@ public class Hook : MonoBehaviour
 
             collider.attachedRigidbody.GetComponent<Fish>().isAttached = true;
 
-            player.Play(Controller.Left);
+            player.Play(Controller.Right);
 
             if(_audioSource != null && _Fishbite != null)
             {
