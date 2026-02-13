@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Oculus.Interaction;
-// using Oculus.Haptics;
+using Oculus.Haptics;
 
 
 public class Hook : MonoBehaviour
-{
-
-    //[SerializeField] private Oculus.Haptics.HapticClipPlayer _hapticPlayer;
+{   
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _sound;
+    [SerializeField] private AudioClip _Fishbite;
+    [SerializeField] private AudioClip _FishGrabSound;
+
+    [Header("Haptics")]
+    [SerializeField] private HapticClipPlayer player; // Le lecteur
+    [SerializeField] public HapticClip biteHapticClip;
 
 
 
@@ -32,6 +35,11 @@ public class Hook : MonoBehaviour
     State state = State.Waiting;
     float stateTime = 0;
 
+    void Awake()
+    {
+        player = new HapticClipPlayer(biteHapticClip);
+    }
+
 
     void OnTriggerEnter(Collider collider)
     {
@@ -51,14 +59,11 @@ public class Hook : MonoBehaviour
 
             collider.attachedRigidbody.GetComponent<Fish>().isAttached = true;
 
-            // if(_hapticPlayer != null)
-            //{
-                //_hapticPlayer.Play();
-            //}
+            player.Play(Controller.Left);
 
-            if(_audioSource != null && _sound != null)
+            if(_audioSource != null && _Fishbite != null)
             {
-                _audioSource.PlayOneShot(_sound);
+                _audioSource.PlayOneShot(_Fishbite);
             }
 
               grabInteractable = hookedFishRb.GetComponentInChildren<GrabInteractable>();
@@ -74,6 +79,10 @@ public class Hook : MonoBehaviour
         // When grab starts
         if (args.NewState == InteractableState.Select)
         {
+            if(_audioSource != null && _FishGrabSound != null)
+            {
+                _audioSource.PlayOneShot(_FishGrabSound);
+            }
                 UnhookFish();
         }
     }
